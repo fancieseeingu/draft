@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bejeweled - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      height: 90vh;
+      min-height: 600px;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .promo-side {
+      flex: 1;
+      position: relative;
+      background-color: #000;
+    }
+
+    .promo-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+
+    .promo-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .promo-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .promo-text span {
+      color: #d4af37;
+    }
+
+    .promo-text p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .login-side {
+      flex: 1;
+      background-color: #1f1f1f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-card {
+      width: 80%;
+      max-width: 400px;
+      background-color: rgba(31, 31, 31, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .login-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #d4af37;
+    }
+
+    .login-card span {
+      font-weight: bold;
+    }
+
+    .login-methods {
+      font-size: 0.9em;
+      margin-bottom: 20px;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .social-buttons button {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background-color: #444;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-buttons i {
+      color: white;
+      font-size: 18px;
+    }
+
+    .or-divider {
+      margin: 20px 0;
+      font-size: 0.8em;
+      color: #aaa;
+    }
+
+    form input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background-color: #2e2e2e;
+      color: #fff;
+    }
+
+    form input::placeholder {
+      color: #aaa;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #d4af37;
+      color: #1f1f1f;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #bfa133;
+    }
+
+    .forgot-register {
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+
+    .forgot-register a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+      }
+
+      .container {
+        flex-direction: column;
+        height: auto;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .promo-side,
+      .login-side {
+        width: 100%;
+        height: auto;
+      }
+
+      .promo-side img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .promo-text {
+        position: static;
+        transform: none;
+        padding: 20px;
+      }
+
+      .promo-text h1 {
+        font-size: 1.8em;
+      }
+
+      .promo-text p {
+        font-size: 1em;
+      }
+
+      .login-card {
+        width: 100%;
+        max-width: none;
+        padding: 30px 20px;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="promo-side">
+      <img src="wow.jpg" alt="Jewelry Image" />
+      <div class="promo-text">
+        <h1>Explore Our Collections<br><span>BEJEWELED</span></h1>
+        <p>
+          Dive into our carefully curated collections, featuring timeless pieces crafted with the finest materials. From everyday essentials to statement jewelry, there’s something for every occasion.
+        </p>
+      </div>
+    </div>
+
+    <div class="login-side">
+      <div class="login-card">
+        <h2>Sign in to your<br><span>Account</span></h2>
+        <p class="login-methods">Login with the following methods</p>
+        <div class="social-buttons">
+          <button class="google"><i class="fab fa-google"></i></button>
+          <button class="facebook"><i class="fab fa-facebook-f"></i></button>
+          <button class="apple"><i class="fab fa-apple"></i></button>
+        </div>
+        <div class="or-divider"><span>OR</span></div>
+        <form action="index.html" method="get">
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button class="submit-btn" type="submit">LOGIN</button>
+        </form>
+        <div class="forgot-register">
+          <a href="#">Forgot your password?</a>
+          <p>Don’t have an account? <a href="#">Register Now</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
