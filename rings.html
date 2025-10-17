@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rings - Bejeweled</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #fafafa;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 36px;
+  color: #000;
+}
+
+.top-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.top-links a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.top-links a:hover {
+  color: #d4af37;
+}
+
+/* Navigation Icons */
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 15px 0;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-icons a {
+  text-align: center;
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav-icons a img {
+  display: block;
+  margin: 0 auto 8px auto;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.nav-icons a:hover img {
+  border-color: #d4af37;
+}
+
+.nav-icons a:hover {
+  color: #d4af37;
+}
+
+/* Hero */
+.hero {
+  background: url('assets/hero.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  color: #e9dada;
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero-content h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  background: #d4af37;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background: #b8962e;
+  color: #fff;
+}
+
+/* Product Section */
+.section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #222;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.product h4 {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.product p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product button {
+  padding: 8px 14px;
+  border: none;
+  background: #d4af37;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background: #b8962e;
+  color: #fff;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+  color: #444;
+  padding: 20px;
+  background: #fff;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bejeweled</h1>
+  <div class="top-links">
+    <a href="account.html">My Account</a>
+    <a href="cart.html">Cart</a>
+    <a href="shoppingbag.html">Shopping Bag</a>
+  </div>
+</header>
+
+<div class="nav-icons">
+  <a href="necklace.html"><img src="assets/icons/necklace.png" alt="Necklaces"><span>Necklaces</span></a>
+  <a href="rings.html"><img src="assets/icons/ring.png" alt="Rings"><span>Rings</span></a>
+  <a href="earrings.html"><img src="assets/icons/earring.png" alt="Earrings"><span>Earrings</span></a>
+  <a href="chains.html"><img src="assets/icons/chain.png" alt="Chains"><span>Chains</span></a>
+  <a href="bracelet.html"><img src="assets/icons/bracelet.png" alt="Bracelets"><span>Bracelets</span></a>
+</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Adorn Your Hands with Radiant Rings</h2>
+    <p>Celebrate love, friendship, and elegance with our exclusive ring collections.</p>
+    <button>Shop All Rings</button>
+  </div>
+</section>
+
+<!-- WEDDING RINGS -->
+<section class="section">
+  <h2>Wedding Rings</h2>
+  <div class="products">
+    <div class="product"><img src="wedding1.jfif" alt="">
+      <h4>Rose Gold Plated Titanium</h4>
+      <p>$300</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="wed2.jfif" alt="">
+      <h4>Yellow Gold Round Zirconia</h4>
+      <p>$320</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="wed3.jfif" alt="">
+      <h4>Modern White and Rose Gold </h4>
+      <p>$280</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="wed4.jpg" alt="">
+      <h4>Classic Yellow Gold with Diamond</h4>
+      <p>$350</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="wed5.jpg" alt="">
+      <h4>Matching Classic Diamond </h4>
+      <p>$400</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="wed6.jpg" alt="">
+      <h4>Solitaire Diamond</h4>
+      <p>$310</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="wed7.jpg" alt="">
+      <h4>White Gold and Platinum </h4>
+      <p>$330</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="wed8.jpg" alt="">
+      <h4>Gold Ethernal Embrace</h4>
+      <p>$370</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT RINGS -->
+<section class="section">
+  <h2>Engagement Rings</h2>
+  <div class="products">
+    <div class="product"><img src="engag.png" alt="">
+      <h4>White Gold Princess Diamond</h4>
+      <p>$290</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="engag2.png" alt="">
+      <h4>White Gold Green Sapphire</h4>
+      <p>$310</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="engag3.png" alt="">
+      <h4>Yellow Gold Oval Diamond</h4>
+      <p>$340</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="engag4.jfif" alt="">
+      <h4>Square Halo</h4>
+      <p>$360</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="engag5.jfif" alt="">
+      <h4>Snowflake Diamond</h4>
+      <p>$380</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="engag6.jfif" alt="">
+      <h4>Melbourne Diamond</h4>
+      <p>$290</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="engag7.jpg" alt="">
+      <h4>Round Solitaire </h4>
+      <p>$305</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="engag8.jpg" alt="">
+      <h4>White Gold Blossom Diamond</h4>
+      <p>$325</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE RINGS -->
+<section class="section">
+  <h2>Promise Rings</h2>
+  <div class="products">
+    <div class="product"><img src="prom.jpg" alt="">
+      <h4>Titanium Steel </h4>
+      <p>$200</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="prom1.jpg" alt="">
+      <h4>Couple Heart</h4>
+      <p>$210</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="prom2.jpg" alt="">
+      <h4>King and Queen</h4>
+      <p>$230</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="prom3.jfif" alt="">
+      <h4>Gold and Silver</h4>
+      <p>$250</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="prom4.jpg" alt="">
+      <h4>Pair Commitment</h4>
+      <p>$220</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="prom5.jpg" alt="">
+      <h4>Sterling Silver</h4>
+      <p>$240</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="prom6.jfif" alt="">
+      <h4>Love at First Sight</h4>
+      <p>$260</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="prom7.jfif" alt="">
+      <h4>Sun and Moon</h4>
+      <p>$280</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- BIRTHSTONE RINGS -->
+<section class="section">
+  <h2>Birthstone Rings</h2>
+  <div class="products">
+    <div class="product"><img src="bir1.jpg" alt="">
+      <h4>March Birth</h4>
+      <p>$240</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="bir2.jpg" alt="">
+      <h4>Alexandrite Diamond and Square</h4>
+      <p>$250</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="bir3.jfif" alt="">
+      <h4>Trinity Knot</h4>
+      <p>$260</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="bir4.jpg" alt="">
+      <h4>Emerald Mixable</h4>
+      <p>$270</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="bir5.jfif" alt="">
+      <h4>Blue Nile</h4>
+      <p>$280</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="bir6.jfif" alt="">
+      <h4>Green Sapphire</h4>
+      <p>$290</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="bir7.jfif" alt="">
+      <h4>Peridot Stacking</h4>
+      <p>$300</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="bir8.png" alt="">
+      <h4>Cancer Zodiac</h4>
+      <p>$310</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- FRIENDSHIP RINGS -->
+<section class="section">
+  <h2>Friendship Rings</h2>
+  <div class="products">
+    <div class="product"><img src="fri1.png" alt="">
+      <h4>Ray of Hope Gold Band</h4>
+      <p>$220</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="fri2.jpg" alt="">
+      <h4>Love Heart Engraved</h4>
+      <p>$230</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="fri3.png" alt="">
+      <h4>Friend Forever</h4>
+      <p>$240</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="fri4.png" alt="">
+      <h4>Pinky Swear</h4>
+      <p>$260</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="fri5.jfif" alt="">
+      <h4>Sterling Silver</h4>
+      <p>$270</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="fri6.jfif" alt="">
+      <h4>Infinity Friendship</h4>
+      <p>$280</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="fri7.jpg" alt="">
+      <h4>Infinity Friendship 2</h4>
+      <p>$290</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product"><img src="fri8.png" alt="">
+      <h4>High Polished Steanless</h4>
+      <p>$300</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Bejeweled. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
