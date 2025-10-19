@@ -64,12 +64,13 @@
 
   .middle-row {
     background: var(--color-soft-white);
-    padding: 18px 0 22px 0;
+    padding: 15px 0 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid #eef1f6;
     box-shadow: 0 2px 8px 0 rgba(74, 90, 122, 0.07);
+    bottom: 2px;
   }
   .logo {
     font-family: "Great Vibes", cursive;
@@ -77,29 +78,32 @@
     letter-spacing: 1px;
     color: var(--color-charcoal);
     margin: 0;
-    line-height: 1;
+    line-height: .8;
   }
 
   .nav-menu {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    padding: 8px 0;
+    gap: 15px;
+    padding: 6px 0;
     background: var(--color-soft-white);
     border-bottom: 1px solid var(--color-charcoal);
     position: sticky;
     top: 0;
     z-index: 998;
+    line-height: 1;
   }
   .nav-menu a {
     text-decoration: none;
     color: var(--color-charcoal);
     font-weight: bold;
     font-size: 16px;
-    padding: 4px 8px;
+    padding: 3px 6px;
     border-radius: 3px;
     user-select: none;
     transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
+    position: relative;
+    top: -8px;
   }
   .nav-menu a:hover, .nav-menu a:focus {
     background: var(--color-muted-beige);
@@ -128,7 +132,7 @@
   object-fit: cover;
   opacity: 0;
   animation-name: fadeAnimation;
-  animation-duration: 24s;
+  animation-duration: 15s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
@@ -139,12 +143,12 @@
 }
 
 .slides img:nth-child(2) {
-  animation-delay: 8s;
+  animation-delay: 5s;
   animation-fill-mode: both;
 }
 
 .slides img:nth-child(3) {
-  animation-delay: 16s;
+  animation-delay: 10s;
   animation-fill-mode: both;
 }
 
@@ -159,10 +163,70 @@
     .hero-slider { height: 320px; }
     .logo { font-size: 38px; }
   }
-
   
-  
+  .search-form {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px; 
+}
 
+.search-form input[type="search"] {
+  background: none;
+  border: none;
+  border-bottom: none;
+  color: #fff;      
+  font-weight: 10;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  width: 85px;                         
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  outline: none;
+  caret-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.search-form input[type="search"]::placeholder {
+  color: #fff;
+  opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.search-form::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: .5px;                
+  width: 100px;                  
+  background: #fff;
+  z-index: 0;
+}
+.search-form input[type="search"] {
+  color: white; 
+}
+
+.search-form input[type="search"]::placeholder {
+  color: white; 
+  opacity: 1;   
+  text-transform: none; 
+}
+
+@media (max-width: 600px) {
+  .search-form {
+    margin-left: 8px;
+  }
+  .search-form::after {
+    width: 100px;
+  }
+  .search-form input[type="search"] {
+    width: 60px;
+    font-size: 13px;
+  }
+}
   .hero-content {
     position: absolute;
     top: 50%;
@@ -266,7 +330,6 @@
     border: 1px solid  var(--color-slate-blue);;
   }
 
-  /* Featured Collections */
   .featured-collections {
     width: 100vw;
     max-width: 100vw;
@@ -333,6 +396,7 @@
       padding: 12px 28px;
     }
   }
+  
 
   .footer-benefits-row {
     width: 100vw;
@@ -395,12 +459,17 @@
 <body>
   <div class="header-bar">
     <div class="left-links">
-      <a href="#">My Account</a>
-      <a href="#">Cart</a>
-      <a href="#">Shopping Bag</a>
+      <a href="#">Log In</a>
+      <a href="#">Contact Us</a>
+      
+      <form class="search-form"action="#" method="get" novalidate>
+        <input type="search" id="search-input" name="search" autocomplete="off" placeholder="Search" />
+      </form>
     </div>
     <div class="right-link">
-      <a href="#">Contact Us</a>
+      <a href="#">My Account </a>
+      <a href="#">Shopping Cart </a>
+      <a href="#">Wishlist </a>
     </div>
   </div>
 
@@ -418,8 +487,8 @@
 
   <section class="hero-slider">
     <div class="slides">
-      <img src="bg9.jpg" alt="Slide 1" loading="eager" />
-      <img src="bg7.jpg" alt="Slide 2" loading="lazy" />
+      <img src="bg7.jpg" alt="Slide 1" loading="eager" />
+      <img src="bg9.jpg" alt="Slide 2" loading="lazy" />
       <img src="bg5.jpg" alt="Slide 3" loading="lazy" />
     </div>
     <div class="hero-content">
