@@ -1,0 +1,359 @@
+
+this is the partial code:
+
+class MyCTUWallet:
+    def __init__(self, student_id):
+        self.___student_id= student_id
+        self.___balance= 0.0
+        self.___transaction_log=[]
+        
+    def deposit(self,amount):
+        if amount >0:
+            self.___+= amount
+            self.___.append(f"Deposited: {amount}")
+        else:
+            print("Deposit amount must be positive.")
+            
+    def withdraw(self,amount):
+        if amount<=0:
+            print("Withdrawal amount must be positive.")
+        elif amount > self.___:
+            print("Insufficient funds.")
+        elif amount > 500:
+            print("Cannot withdraw more than 500 pesos in a single transaction.")
+        else:
+            self.___-= amount
+            self.___.append(f"Withdrew: {amount}")
+            
+    def get_balance(self):
+        return self.___
+    def get_transaction_log(self):
+        return self.___.copy()
+    
+    def dict(self):
+        return{
+            "student_id": self.___,
+            "balance": self.___,
+            "transaction": self.___
+            }
+        
+while this is the full instruction, make sure you understand the instructions and make sure you follow the instruction and for me not to get confuse make a comment part is this or that: Complete the class below by 
+filling in the missing parts. This activity focuses on practicing encapsulation, 
+ method creation, and API-style output. Write your answers legibly together 
+ with the additional challenge requirements
+
+MyCTUWallet
+
+-_ student_id : str
+-_ balance : float
+-_ transaction_log : list
+
++deposit(amount: float) : void
++withdraw(amount: float) : void
++get_balance() : float
++get_transaction_log() : list
++to_dict() : dict
+
+Encapsulation Requirements:
+Balance and transaction
+history should not be directly
+accessed or changed from
+outside the class.
+Use getters/setters only where
+necessary.
+Apply input validation (e.g.,
+cannot deposit or withdraw
+negative amounts).
+
+Challenge:
+
+Add transaction history
+using a private list attribute.
+Add a method to generate a
+bank statement, showing
+balance and transaction logs.
+Use exception handling to
+block over-withdrawal and
+print friendly messages.
+Add a
+limit_withdrawal(amount)
+method to prevent spending
+more than 1500 per day.
+Create a simple UI using
+input() to simulate a basic
+menu:
+1.deposit
+2.Withdraw
+3. Check Balance
+4. View Transactions
+
+
+check my code if it follows the instruction correctly:
+#Name: Quennie Marie B. Pantalita
+#Sas Week:  4
+class WebDesigner:
+    __totalprofessionals=0
+    
+    def __init__(self,name,Yearexperience,skills,salary,projects):
+        self._name=name
+        self._Yearexperience= Yearexperience
+        self._skills=skills
+        self._salary=salary
+        self._projects=projects
+        WebDesigner.__totalprofessionals +=1
+    
+    def get_name(self):
+        return self._name
+   
+    def set_name(self,name):
+        if not name:
+            raise ValueError("Name cannot be empty.")
+        self._name = name
+        
+    
+    def get_Yearexperience(self):
+        return self._Yearexperience
+
+    def set_Yearexperience(self,Yearexperience):
+        if Yearexperience <0:
+            raise ValueError("Years of experience cannot be negative. ")
+        self._Yearexperience= Yearexperience
+        
+    
+    def get_skills(self):
+        return self._skills
+    
+    def set_skills(self,skills):
+        if not isinstance(skills, list):
+            raise ValueError("Skills must be  a list")
+        self._skills= skills
+        
+    
+    def get_salary(self):
+        return self._salary
+    
+    def set_salary(self,salary):
+        if salary <0:
+            raise ValueError("Salary cannot be negative. ")
+        self._salary= salary
+        
+    
+    def get_projects(self):
+        return self._projects
+  
+    def set_projects(self,projects):
+        if not isinstance(projects,list):
+            raise ValueError("projects must be in a list.")
+        self._projects = projects   
+    
+    def add_skills(self,skill):
+        if skill not in self._skills:
+            self._skills.append(skill)
+            print(f"Skill '{skill}' added.")
+        else:
+            print(f"Skill '{skill}' already exists.")
+            
+    def review_skills(self):
+        print(f"Current skills: {', '.join(self._skills)}")
+        
+        
+    
+    def design_website(self, project):
+        if project not in self._projects:
+            self._projects.append(project)
+            print(f"Started designing new project '{project}'.")
+        else:
+            print(f"Already working on project '{project}'.")
+
+    def edit_project(self, project):
+        if project in self._projects:
+            print(f"Editing project '{project}'...")
+        else:
+            print(f"Project '{project}' not found.")
+
+    def display_info(self):
+        print(f"Name: {self._name}")
+        print(f"Experience: {self._Yearexperience} years")
+        print(f"Skills: {', '.join(self._skills)}")
+        print(f"Salary: {self._salary}")
+        print(f"Projects: {', '.join(self._projects)}")
+        
+    @classmethod
+    def total_professionals(cls):
+        print(f"Total Web Designer created: {cls.__totalprofessionals}")
+        
+    def simulate_day(self):
+        while True:
+            print("\n--- Simulating Web Designer's Day ---")
+            print("1.Add a New Skill:")
+            print("2.Add a New Project:")
+            print("3.Edit an Existing Project:")
+            print("4.Salary Increase:")
+            print("5.Display Info")
+            print("Enter Choice(1-5):")
+                
+            choice=int(input("Enter choice:"))
+            if choice==1:
+                skill = input("Enter a new skill to learn: ")
+                self.add_skills(skill)
+            elif choice==2:  
+                project = input("Enter a new project to design: ")
+                self.design_website(project)
+            elif choice==3:
+                edit_proj = input("Enter a project to edit: ")
+                self.edit_project(edit_proj)
+            elif choice==4:
+                try:
+                  amount = int(input("Enter salary increase amount: "))
+                  self.salary=self._salary + amount
+                  print(f"Salary updated:{self.salary}")
+                except ValueError:
+                  print("Invalid amount entered.")
+            elif choice==5:
+                self.display_info()
+            else:
+                print("Invalid choice")
+  
+if __name__ == "__main__":
+    designer1 = WebDesigner("Quennie", 3, ["Figma","Photoshop"], 40000, ["Portfolio Site"])
+    designer1.display_info()
+    designer1.simulate_day()
+    WebDesigner.total_professionals()
+    
+Encapsulation Requirements:
+Balance and transaction
+history should not be directly
+accessed or changed from
+outside the class.
+Use getters/setters only where
+necessary.
+Apply input validation (e.g.,
+cannot deposit or withdraw
+negative amounts).that the  instruction said, can you check if it follow:
+
+
+
+
+
+
+
+
+
+
+
+
+
+class MyCTUWallet:
+    def __init__(self, student_id):
+        self.___student_id = student_id
+        self.___balance = 0.0
+        self.___transaction_log = []
+        self.___daily_withdrawal_total = 0.0
+
+    def deposit(self, amount: float):
+        if amount > 0:
+            self.___balance += amount
+            self.___transaction_log.append(f"Deposited: {amount}")
+            print("Deposited Successfully.")
+        else:
+            print("Deposit amount must be positive.")
+
+    def withdraw(self, amount: float):
+        if amount <= 0:
+            print("Withdrawal amount must be positive.")
+            return
+        if amount > self.___balance:
+            print("Insufficient funds.")
+            return
+        if amount > 500:
+            print("Cannot withdraw more than 500 pesos in a single transaction.")
+            return
+        if not self.limit_withdrawal(amount):
+            print("Daily withdrawal limit of 1500 pesos exceeded.")
+            return
+
+        self.___balance -= amount
+        self.___daily_withdrawal_total += amount
+        self.___transaction_log.append(f"Withdrew: {amount}")
+        print("Withdraw Successfully.")
+
+    def get_balance(self):
+        return self.___balance
+
+    def get_transaction_log(self):
+        return self.___transaction_log.copy()
+
+    def to_dict(self):
+        return {
+            "student_id": self.___student_id,
+            "balance": self.___balance,
+            "transaction": self.___transaction_log.copy()
+        }
+
+    def bank_statement(self):
+        print(f"\nBank Statement for Student Id: {self.___student_id}")
+        print(f"Current Balance: {self.___balance:.2f}")
+        print("Transaction History:")
+        for entry in self.___transaction_log:
+            print(f"_{entry}")
+
+    def limit_withdrawal(self, amount):
+        return self.___daily_withdrawal_total + amount <= 1500
+
+
+def run_wallet():
+    student_id = input("Enter your Student Id: ")
+    wallet = MyCTUWallet(student_id)
+
+    while True:
+        print("\nCTU WALLET MENU:")
+        print("1. Deposit")
+        print("2. Withdraw")
+        print("3. Check Balance")
+        print("4. View Transactions")
+        print("5. Exit")
+
+        try:
+            choice = int(input("Choose an option (1–5): "))
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 5.")
+            continue
+
+        if choice == 1:
+            try:
+                amount = float(input("Enter deposit amount: "))
+                wallet.deposit(amount)
+            except ValueError:
+                print("Invalid input. Please enter a number.")
+        elif choice == 2:
+            try:
+                amount = float(input("Enter withdrawal amount: "))
+                wallet.withdraw(amount)
+            except ValueError:
+                print("Invalid input. Please enter a number.")
+        elif choice == 3:
+            print(f"Your current balance is: {wallet.get_balance():.2f}")
+        elif choice == 4:
+            print("Transaction Log:")
+            for log in wallet.get_transaction_log():
+                print(f" - {log}")
+        elif choice == 5:
+            print("Thank you for using CTU Wallet!")
+            break
+        else:
+            print("Invalid option. Please choose between 1 and 5.")
+
+
+if __name__ == "__main__":
+    run_wallet()
+
+
+
+
+walley.bank_statement()
+print("Thank you for using CTU Wallet!")
+
+wallet = MyCTUWallet("2025-00123")
+wallet.deposit(1000)
+wallet.withdraw(300)
+wallet.bank_statement()
